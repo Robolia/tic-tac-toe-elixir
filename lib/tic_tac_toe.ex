@@ -9,10 +9,11 @@ defmodule TicTacToe do
   ----|----|----
    p7 | p8 | p9
 
-  Possible values for each position are "x", "o" or nil.
+  Possible values for each position are :x, :o or nil.
 
-  "x" is always for the first player
-  "o" is always for the second player
+  :x is always for the first player
+  :x is always for the second player
+  nil is empty space
   """
 
   @doc """
@@ -29,7 +30,7 @@ defmodule TicTacToe do
 
   ## Example of how this function will be called
 
-    iex> TicTacToe.play(%{p1: "x", p2: nil, p3: nil, p4: nil, p5: "o", p6: nil, p7: nil, p8: nil, p9: "x"}, 4)
+    iex> TicTacToe.play(%{p1: :x, p2: nil, p3: nil, p4: nil, p5: :o, p6: nil, p7: nil, p8: nil, p9: :x}, 4)
     7
   """
 

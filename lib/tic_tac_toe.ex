@@ -3,16 +3,16 @@ defmodule TicTacToe do
   # Tic Tac Toe Map
   =================
 
-   p1 | p2 | p3
+   p7 | p8 | p9
   ----|----|----
    p4 | p5 | p6
   ----|----|----
-   p7 | p8 | p9
+   p1 | p2 | p3
 
   Possible values for each position are :x, :o or nil.
 
-  :x is always for the first player
-  :x is always for the second player
+  :x is always played by the first player
+  :o is always played by the second player
   nil is empty space
   """
 
@@ -26,7 +26,9 @@ defmodule TicTacToe do
 
   The `turn` parameter will be always between 1 and 9, and it is
   related to the current turn. So, if three positions are occupied,
-  `turn` parameter will be 4.
+  the received `turn` parameter will be 4.
+
+  If this function returns an invalid value, then this player loses the match.
 
   ## Example of how this function will be called
 
